@@ -1,0 +1,50 @@
+#board_name{
+    width: 100%;
+    background-color: #EEEEEE;
+    border:none;
+    border-radius: 5px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+   
+
+#board_description{
+    width: 100%;
+    background-color: #EEEEEE;
+    border:none;
+    border-radius: 5px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.board{
+    background-color:#EEEEEE;
+    margin-bottom: 20px;
+    height:150px;
+    border-radius: 5px;
+}
+
+.board_content{
+    padding-top: 10px;
+    padding-left: 15px;
+}
+   
+.board_name{
+  font-size: 20px;
+}
+
+.board_description{
+    color:#BBBBBB;
+}
+
+.addnewboard{
+    text-align: center;
+    border:1px dotted #AAAAAA;
+    padding: 50px;
+    border-radius: 5px;
+
+    a{
+        color: black;
+        text-decoration: none;
+    }
+}

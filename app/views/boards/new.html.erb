@@ -1,0 +1,20 @@
+<div class="container">
+<h2>New Board</h2>
+
+<%= form_with(model: @board, url: boards_path, method: 'post', local: true) do |f| %>
+    <div>
+      <%= f.label :name, 'Name' %>
+    </div>
+    <div>
+      <%= f.text_field :name %>
+    </div>
+    <div>
+      <%= f.label :description, 'Description' %>
+    </div>
+    <div>
+      <%= f.text_area :description %>
+    </div>
+    <%= f.submit 'Submit', class: 'button' %>
+<% end %>
+
+</div>
