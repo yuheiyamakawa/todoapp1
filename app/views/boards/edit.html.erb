@@ -1,0 +1,20 @@
+<div class="container">
+<h2>Edit Board</h2>
+
+<%= form_with(model: @board, url: board_path, method: 'put', local: true) do |f| %>
+    <div>
+      <%= f.label :name, 'Name' %>
+    </div>
+    <div>
+      <%= f.text_field :name %>
+    </div>
+    <div>
+      <%= f.label :description, 'Description' %>
+    </div>
+    <div>
+      <%= f.text_area :description %>
+    </div>
+    <%= f.submit 'Submit', class: 'button' %>
+<% end %>
+
+</div>

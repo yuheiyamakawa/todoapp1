@@ -1,0 +1,38 @@
+.dropbtn{
+    position: absolute;
+    top:10px;
+    right:25px;
+
+    &:hover{
+
+        .dropdown-content{
+            display: block;
+            position: absolute;
+            top:20px;
+            right:1px;
+        }
+
+    }
+}
+
+
+.dropdown-content{
+    background: #FFFFFF;
+    border: 1px solid #F4F4F4;
+    border-radius: 10px;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: none;
+    
+    a {text-decoration: none;
+        color: black;
+    }
+}
+
