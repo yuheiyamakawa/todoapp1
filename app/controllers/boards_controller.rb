@@ -3,7 +3,7 @@ class BoardsController < ApplicationController
       before_action :authenticate_user!, only: [:new] 
 
       def index
-         @boards = Board.all
+         @boards = Board.all.order(id: "DESC")
       end
   
       def show
@@ -24,12 +24,23 @@ class BoardsController < ApplicationController
       end
   
       def edit
+        @board = current_user.boards.find(params[:id])
       end
   
       def update
+        @board = current_user.boards.find(params[:id])
+          if @board.update(board_params)
+          redirect_to root_path, notice: '更新できました'
+          else
+          flash.now[:error] = '更新できませんでした'
+          render :edit
+      end
       end
   
       def destroy
+      board = current_user.boards.find(params[:id])
+      board.destroy!
+      redirect_to root_path, notice:'削除に成功しました'
       end
   
       private

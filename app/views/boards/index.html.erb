@@ -11,6 +11,17 @@
         <%= board.description %>
       </div>
     </div>
+
+    <% if current_user && board.user.id == current_user.id %>
+      <div class="dropbtn">
+        <%= image_tag 'dropdown.png' %>
+        <div class="dropdown-content">
+          <%= link_to 'Edit', edit_board_path(board) %>
+          <%= link_to "Delete", board_path(board), method: :delete %>
+        </div>
+      </div>
+    <% end %>
+
   </div>
 <% end %>
 
