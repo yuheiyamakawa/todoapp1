@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Profile</h2>
+  <p class="avatar">avatar</p>
+  <% if current_user&.profile&.avatar&.attached? %>
+    <%= image_tag current_user.profile.avatar, class: 'profile_img'  %>
+  <% end %>
+  <p class="nickname">nickname</p>
+    <%= @profile&.nickname %>
+  <p class="introduction">introduction</p>
+    <%= @profile&.introduction %>
+  <%= link_to 'Edit', edit_profile_path, class: 'button' %>
+</div>

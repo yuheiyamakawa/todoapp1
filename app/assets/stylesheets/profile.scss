@@ -1,0 +1,40 @@
+#profile_nickname{
+    width: 100%;
+    background-color: #EEEEEE;
+    border:none;
+    border-radius: 5px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+#profile_introduction{
+    width: 100%;
+    background-color: #EEEEEE;
+    border:none;
+    border-radius: 5px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+#profile_avatar{
+    margin-bottom: 20px;
+}
+
+.nickname{
+    font-weight: bold;
+}
+
+.introduction{
+    font-weight: bold;
+}
+
+.avatar{
+    font-weight: bold;
+}
+
+.profile_img{
+    width:100px;
+    height:100px;
+    object-fit: cover;
+}
+
