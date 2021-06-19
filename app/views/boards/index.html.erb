@@ -21,7 +21,14 @@
         </div>
       </div>
     <% end %>
-
+    
+    
+      <% if board.user&.profile&.avatar&.attached? %>
+        <%= image_tag board.user.profile.avatar, class: 'board_img'  %>
+      <% else %>
+        <%= image_tag 'default-avatar.png', class: 'board_img'  %>
+      <% end %>
+    
   </div>
 <% end %>
 

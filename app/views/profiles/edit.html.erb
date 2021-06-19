@@ -1,0 +1,26 @@
+<div class="container">
+<h2>Edit Profile</h2>
+
+<%= form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f| %>
+    <div>
+      <%= f.label :avatar, 'Avatar' %>
+    </div>
+    <div>
+      <%= f.file_field :avatar %>
+    </div>
+    <div>
+      <%= f.label :nickname, 'Nickname' %>
+    </div>
+    <div>
+      <%= f.text_field :nickname %>
+    </div>
+    <div>
+      <%= f.label :introduction, 'Introduction' %>
+    </div>
+    <div>
+      <%= f.text_area :introduction %>
+    </div>
+    <%= f.submit 'Submit', class: 'button' %>
+<% end %>
+
+</div>

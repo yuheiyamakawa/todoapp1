@@ -50,3 +50,13 @@
         text-decoration: none;
     }
 }
+
+.board_img{
+    width:45px;
+    height:45px;
+    border-radius: 100px;
+    object-fit: cover;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}

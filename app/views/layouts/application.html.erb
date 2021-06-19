@@ -13,7 +13,24 @@
   <body>
     <header>
     <div class="container">
-    <div class="title">Boards</div>
+      <div class="title">Boards</div>
+      <div class="dropbtn"> 
+        <% if current_user&.profile&.avatar&.attached? %>
+          <%= image_tag current_user.profile.avatar, class: 'header_img'  %>
+        <% else %>
+          <%= image_tag 'default-avatar.png', class: 'header_img'  %>
+        <% end %>
+        <div class="dropdown-content">
+          <% if current_user %>
+            <%= link_to 'Profile', profile_path %>
+          <% end %>
+          <% if current_user %>
+            <%= link_to "Logout", destroy_user_session_path, method: 'delete' %>
+          <% else %>
+            <%= link_to "Login", new_user_session_path, method: 'get' %>
+          <% end %>
+        </div>
+      </div>
     </div>
     </header>
 
