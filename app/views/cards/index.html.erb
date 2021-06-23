@@ -1,0 +1,40 @@
+<div class="container">
+<h2>Brackets</h2>
+
+<% @cards.each do |card| %>
+  <%= link_to board_card_path(id: card.id) do %>
+    <div class="board">
+      <div class="board_content">
+        <% if card&.eyecatch&.attached? %>
+          <%= image_tag card.eyecatch, class: 'card_img'  %>
+        <% end %>
+        <div class="board_name">
+          <%= card.name %>
+        </div>
+        <div class="board_description">
+          <%= card.description %>
+        </div>
+      </div>
+
+      <% if current_user && card.user.id == current_user.id %>
+        <div class="dropbtn">
+          <%= image_tag 'dropdown.png' %>
+          <div class="dropdown-content">
+            <%= link_to 'Edit', edit_board_card_path(id: card.id) %>
+            <%= link_to 'Delete', board_card_path(id: card.id), method: 'delete'  %>
+          </div>
+        </div>
+      <% end %>
+      
+      
+        <% if card.user&.profile&.avatar&.attached? %>
+          <%= image_tag card.user.profile.avatar, class: 'board_img'  %>
+        <% else %>
+          <%= image_tag 'default-avatar.png', class: 'board_img'  %>
+        <% end %>
+      </div>
+    <% end %>
+<% end %>
+
+<p class="addnewcard" ><%= link_to "+ Add new card", new_board_card_path(params[:board_id]) %><p>
+</div>

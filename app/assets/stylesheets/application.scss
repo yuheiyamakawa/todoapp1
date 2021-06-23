@@ -14,6 +14,11 @@
  *= require_self
  */
 
+ a{
+    text-decoration: none;
+    color: black;
+ }
+
  .title{
      font-size: 30px;
      padding-bottom: 10px;
@@ -34,4 +39,16 @@
     height:45px;
     border-radius: 100px;
     object-fit: cover;
+}
+
+input{
+    margin-top: 7px;
+}
+
+textarea{
+    margin-top: 7px;
+}
+
+h1{
+    font-weight: lighter;
 }

@@ -1,0 +1,26 @@
+<div class="container">
+<h2>New Card</h2>
+
+<%= form_with(model: @card, url: board_cards_path, method: 'post', local: true) do |f| %>
+    <div>
+      <%= f.label :eyecatch, 'Eyecatch' %>
+    </div>
+    <div>
+      <%= f.file_field :eyecatch %>
+    </div>
+    <div>
+      <%= f.label :name, 'Name' %>
+    </div>
+    <div>
+      <%= f.text_field :name %>
+    </div>
+    <div>
+      <%= f.label :description, 'Description' %>
+    </div>
+    <div>
+      <%= f.text_area :description %>
+    </div>
+    <%= f.submit 'Submit', class: 'button' %>
+<% end %>
+
+</div>

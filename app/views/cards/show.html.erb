@@ -1,0 +1,14 @@
+<h1><%= @card.name %></h1>
+
+<% if @card&.eyecatch&.attached? %>
+  <%= image_tag @card.eyecatch, class: 'card_img2'  %>
+<% end %>
+
+<div class="card_description">
+  <%= @card.description %>
+</div>
+
+
+
+<h2 class="comments">Comments</h2>
+<p class="addnewboard" ><%= link_to "+ Add new comment", new_board_path %><p>

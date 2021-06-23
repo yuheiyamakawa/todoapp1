@@ -34,7 +34,7 @@ class BoardsController < ApplicationController
           else
           flash.now[:error] = '更新できませんでした'
           render :edit
-      end
+          end
       end
   
       def destroy
